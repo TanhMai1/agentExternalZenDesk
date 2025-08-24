@@ -104,8 +104,8 @@
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; 
 
-            //Passing Web Context to Prechat - BEGIN
-            var varAccountId = "0014w00003tcDI4AAM";
+			   //Passing Web Context to Prechat - BEGIN
+            var varAccountId = "001VA00000O7qaQYAR";
         
             window.addEventListener("onEmbeddedMessagingReady", e => {
             //log event
@@ -120,20 +120,20 @@
 			 console.log("onEmbeddedMessagingReady account_id:" + varAccountId);
 
 			embeddedservice_bootstrap.init(
-				'00Dcb000003Y14n',
-				'Messaging_for_Agent',
-				'https://kaseya--sp.sandbox.my.site.com/ESWMessagingforAgent1750356136477',
+				'00DVA000003qL6f',
+				'External_Billing_Agent',
+				'https://kaseya--zendeskpoc.sandbox.my.site.com/ESWExternalBillingAgent1755884494986',
 				{
-					scrt2URL: 'https://kaseya--sp.sandbox.my.salesforce-scrt.com'
+					scrt2URL: 'https://kaseya--zendeskpoc.sandbox.my.salesforce-scrt.com'
 				}
 			);
 		} catch (err) {
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
-
 </script>
-<script type='text/javascript' src='https://kaseya--sp.sandbox.my.site.com/ESWMessagingforAgent1750356136477/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://kaseya--zendeskpoc.sandbox.my.site.com/ESWExternalBillingAgent1755884494986/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 
 
 </body>
