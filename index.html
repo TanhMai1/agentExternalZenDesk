@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaseya - IT Management & Security Solutions</title>
+    <!--
+      This script loads the Tailwind CSS framework from a CDN.
+      It provides a set of utility classes to easily style the website.
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /*
+        We're using the 'Inter' font for a clean, modern look.
+        It's a popular choice for web design.
+      */
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+  <!-- Main container for the website content. -->
+  <div class="w-full max-w-3xl bg-white shadow-2xl rounded-3xl overflow-hidden text-center">
+    
+    <!-- Hero Section -->
+    <div class="bg-indigo-700 text-white p-10 md:p-16">
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+        Next-Generation <br class="md:hidden"> IT Management Solutions
+      </h1>
+      <p class="mt-4 text-base md:text-lg opacity-90">
+        Empowering Managed Service Providers (MSPs) and IT departments with powerful automation and security.
+      </p>
+      <div class="mt-8">
+        <a href="#" class="inline-block bg-white text-indigo-700 font-bold py-3 px-8 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-105 hover:bg-gray-200">
+          Learn More
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <main class="p-8 md:p-12 space-y-10">
+
+      <!-- About Section -->
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Platform</h2>
+        <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          The Kaseya 365 Platform is a comprehensive solution designed to unify IT operations. From endpoint management to robust cybersecurity, our platform provides a single pane of glass for all your IT needs, powered by intelligent automation.
+        </p>
+      </section>
+
+      <!-- Services Section -->
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Key Solutions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Service Card 1 -->
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <h3 class="text-xl font-semibold text-indigo-700">IT Automation</h3>
+            <p class="mt-2 text-gray-600">
+              Automate routine tasks to increase efficiency and free up your team for strategic projects.
+            </p>
+          </div>
+          
+          <!-- Service Card 2 -->
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <h3 class="text-xl font-semibold text-indigo-700">Cybersecurity</h3>
+            <p class="mt-2 text-gray-600">
+              Protect your business with a layered security approach, including backup and disaster recovery.
+            </p>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <h3 class="text-xl font-semibold text-indigo-700">Endpoint Management</h3>
+            <p class="mt-2 text-gray-600">
+              Gain full control and visibility over all your devices from a centralized dashboard.
+            </p>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <h3 class="text-xl font-semibold text-indigo-700">Data Backup</h3>
+            <p class="mt-2 text-gray-600">
+              Ensure business continuity with reliable and scalable data backup solutions.
+            </p>
+          </div>
+
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 p-6 text-gray-600">
+      <p>&copy; 2024 Kaseya Inc. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; 
+
+            //Passing Web Context to Prechat - BEGIN
+            var varAccountId = "0014w00003tcDI4AAM";
+        
+            window.addEventListener("onEmbeddedMessagingReady", e => {
+            //log event
+            console.log("onEmbeddedMessagingReady event triggered");
+      
+            //Set invisible prechat field
+            embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+                "Account_Id" : varAccountId,
+                });
+            });
+
+			 console.log("onEmbeddedMessagingReady account_id:" + varAccountId);
+
+			embeddedservice_bootstrap.init(
+				'00Dcb000003Y14n',
+				'Messaging_for_Agent',
+				'https://kaseya--sp.sandbox.my.site.com/ESWMessagingforAgent1750356136477',
+				{
+					scrt2URL: 'https://kaseya--sp.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+
+</script>
+<script type='text/javascript' src='https://kaseya--sp.sandbox.my.site.com/ESWMessagingforAgent1750356136477/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+
+</body>
+</html>
+
