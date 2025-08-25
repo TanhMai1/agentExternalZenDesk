@@ -104,21 +104,6 @@
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; 
 
-			 //Passing Web Context to Prechat - BEGIN
-            var varAccountId = "001VA00000O7qaQYAR";
-        
-            window.addEventListener("onEmbeddedMessagingReady", e => {
-            //log event
-            console.log("onEmbeddedMessagingReady event triggered");
-      
-            //Set invisible prechat field
-            embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-                "Account_Id" : varAccountId,
-                });
-            });
-
-			console.log("onEmbeddedMessagingReady account_id:" + varAccountId);
-
 			embeddedservice_bootstrap.init(
 				'00DVA000003qL6f',
 				'External_Billing_Agent',
