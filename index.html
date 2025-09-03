@@ -104,12 +104,27 @@
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; 
 
+			 //Passing Web Context to Prechat - BEGIN
+            var varAccountId = "0014w00003roSI7AAM";
+        
+            window.addEventListener("onEmbeddedMessagingReady", e => {
+            //log event
+            console.log("onEmbeddedMessagingReady event triggered");
+      
+            //Set invisible prechat field
+            embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+                "Account_Id" : varAccountId,
+                });
+            });
+
+			console.log("onEmbeddedMessagingReady account_id:" + varAccountId);
+
 			embeddedservice_bootstrap.init(
-				'00DVA000003qL6f',
-				'External_Billing_Agent',
-				'https://kaseya--zendeskpoc.sandbox.my.site.com/ESWExternalBillingAgent1755884494986',
+				'00Dcb000003bO9h',
+				'Messaging_for_Agentforce',
+				'https://kaseya--uat.sandbox.my.site.com/ESWMessagingforAgentfor1756409265914',
 				{
-					scrt2URL: 'https://kaseya--zendeskpoc.sandbox.my.salesforce-scrt.com'
+					scrt2URL: 'https://kaseya--uat.sandbox.my.salesforce-scrt.com'
 				}
 			);
 		} catch (err) {
@@ -117,7 +132,8 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://kaseya--zendeskpoc.sandbox.my.site.com/ESWExternalBillingAgent1755884494986/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://kaseya--uat.sandbox.my.site.com/ESWMessagingforAgentfor1756409265914/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 
 
 
