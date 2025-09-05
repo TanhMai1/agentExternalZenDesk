@@ -99,40 +99,25 @@
 
   </div>
 
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; 
+	 <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US';
 
-			 //Passing Web Context to Prechat - BEGIN
-            var varAccountId = "0014w00003roSI7AAM";
-        
-            window.addEventListener("onEmbeddedMessagingReady", e => {
-            //log event
-            console.log("onEmbeddedMessagingReady event triggered");
-      
-            //Set invisible prechat field
-            embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-                "Account_Id" : varAccountId,
-                });
-            });
-
-			console.log("onEmbeddedMessagingReady account_id:" + varAccountId);
-
-			embeddedservice_bootstrap.init(
-				'00Dcb000003bO9h',
-				'Messaging_for_Agentforce',
-				'https://kaseya--uat.sandbox.my.site.com/ESWMessagingforAgentfor1756409265914',
-				{
-					scrt2URL: 'https://kaseya--uat.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://kaseya--uat.sandbox.my.site.com/ESWMessagingforAgentfor1756409265914/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+                embeddedservice_bootstrap.init(
+                    '00Dcb000003bO9h',
+                    'Messaging_for_Agentforce',
+                    'https://kaseya--uat.sandbox.my.site.com/ESWMessagingforAgentfor1756409265914',
+                    {
+                        scrt2URL: 'https://kaseya--uat.sandbox.my.salesforce-scrt.com',
+                        displayHelpButton: false
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
 
 
 
