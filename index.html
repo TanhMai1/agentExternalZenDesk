@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaseya - IT Management & Security Solutions</title>
-    <!--
-      This script loads the Tailwind CSS framework from a CDN.
-      It provides a set of utility classes to easily style the website.
-    -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       /*
@@ -21,10 +17,8 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
 
-  <!-- Main container for the website content. -->
   <div class="w-full max-w-3xl bg-white shadow-2xl rounded-3xl overflow-hidden text-center">
     
-    <!-- Hero Section -->
     <div class="bg-indigo-700 text-white p-10 md:p-16">
       <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
         Next-Generation <br class="md:hidden"> IT Management Solutions
@@ -39,12 +33,10 @@
       </div>
     </div>
 
-    <!-- Main Content Section -->
     <main class="p-8 md:p-12 space-y-10">
 
-	 <button id="customChatButton">Contact Support</button>
+     <button id="customChatButton">Contact Support</button>
 
-      <!-- About Section -->
       <section>
         <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Platform</h2>
         <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto">
@@ -52,12 +44,10 @@
         </p>
       </section>
 
-      <!-- Services Section -->
       <section>
         <h2 class="text-2xl font-bold text-gray-900 mb-6">Key Solutions</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          <!-- Service Card 1 -->
           <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
             <h3 class="text-xl font-semibold text-indigo-700">IT Automation</h3>
             <p class="mt-2 text-gray-600">
@@ -65,7 +55,6 @@
             </p>
           </div>
           
-          <!-- Service Card 2 -->
           <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
             <h3 class="text-xl font-semibold text-indigo-700">Cybersecurity</h3>
             <p class="mt-2 text-gray-600">
@@ -73,7 +62,6 @@
             </p>
           </div>
 
-          <!-- Service Card 3 -->
           <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
             <h3 class="text-xl font-semibold text-indigo-700">Endpoint Management</h3>
             <p class="mt-2 text-gray-600">
@@ -81,7 +69,6 @@
             </p>
           </div>
 
-          <!-- Service Card 4 -->
           <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
             <h3 class="text-xl font-semibold text-indigo-700">Data Backup</h3>
             <p class="mt-2 text-gray-600">
@@ -94,14 +81,15 @@
       
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-200 p-6 text-gray-600">
       <p>&copy; 2024 Kaseya Inc. All rights reserved.</p>
     </footer>
 
   </div>
 
-	 <script type='text/javascript'>
+  <script type='text/javascript' src='https://kaseya--uat.sandbox.my.site.com/ESWMessagingforAgentfor1756409265914/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+  <script type='text/javascript'>
         function initEmbeddedMessaging() {
             try {
                 embeddedservice_bootstrap.settings.language = 'en_US';
@@ -121,7 +109,7 @@
         };
     </script>
 
-	<script>
+  <script>
         document.addEventListener('DOMContentLoaded', function() {
             const customButton = document.getElementById('customChatButton');
             if (customButton) {
@@ -137,8 +125,5 @@
         });
     </script>
 
-
-
 </body>
 </html>
-
