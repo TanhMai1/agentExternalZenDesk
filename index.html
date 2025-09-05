@@ -6,10 +6,6 @@
     <title>Kaseya - IT Management & Security Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /*
-        We're using the 'Inter' font for a clean, modern look.
-        It's a popular choice for web design.
-      */
       body {
         font-family: 'Inter', sans-serif;
       }
@@ -87,43 +83,35 @@
 
   </div>
 
-  <script type='text/javascript' src='https://kaseya--uat.sandbox.my.site.com/ESWMessagingforAgentfor1756409265914/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
   <script type='text/javascript'>
-        function initEmbeddedMessaging() {
-            try {
-                embeddedservice_bootstrap.settings.language = 'en_US';
+    function initEmbeddedMessaging() {
+        try {
+            embeddedservice_bootstrap.settings.language = 'en_US';
+            embeddedservice_bootstrap.init(
+                '00Dcb000003bO9h',
+                'Messaging_for_Agentforce',
+                'https://kaseya--uat.sandbox.my.site.com/ESWMessagingforAgentfor1756409265914',
+                {
+                    scrt2URL: 'https://kaseya--uat.sandbox.my.salesforce-scrt.com',
+                    displayHelpButton: false
+                }
+            );
 
-                embeddedservice_bootstrap.init(
-                    '00Dcb000003bO9h',
-                    'Messaging_for_Agentforce',
-                    'https://kaseya--uat.sandbox.my.site.com/ESWMessagingforAgentfor1756409265914',
-                    {
-                        scrt2URL: 'https://kaseya--uat.sandbox.my.salesforce-scrt.com',
-                        displayHelpButton: false
-                    }
-                );
-            } catch (err) {
-                console.error('Error loading Embedded Messaging: ', err);
-            }
-        };
-    </script>
-
-  <script>
-        document.addEventListener('DOMContentLoaded', function() {
+            // Add the click handler here, after init() is called
             const customButton = document.getElementById('customChatButton');
             if (customButton) {
                 customButton.addEventListener('click', function() {
-                    // Check for the availability of the Salesforce API before calling it
-                    if (window.embeddedservice_bootstrap && window.embeddedservice_bootstrap.utilAPI) {
-                        embeddedservice_bootstrap.utilAPI.launchChat();
-                    } else {
-                        console.error('Embedded Messaging API not ready.');
-                    }
+                    // This call will now succeed because the API is ready
+                    embeddedservice_bootstrap.utilAPI.launchChat();
                 });
             }
-        });
-    </script>
+        } catch (err) {
+            console.error('Error loading Embedded Messaging: ', err);
+        }
+    };
+  </script>
+  
+  <script type='text/javascript' src='https://kaseya--uat.sandbox.my.site.com/ESWMessagingforAgentfor1756409265914/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 </body>
 </html>
